@@ -25,15 +25,15 @@
 */
 
 // ---------- Настройки -----------
-#define GL_KEY "GL"         // ключ сети
+#define GL_KEY "RPH_GL"         // ключ сети
 
 // ------------ Кнопка -------------
 #define BTN_PIN 4           // пин кнопки GPIO4 (D2 на wemos/node), 0 для схемы с ESP-01
-#define USE_BTN 1           // 1 использовать кнопку, 0 нет
+#define USE_BTN 0           // 1 использовать кнопку, 0 нет
 
 // ------------- АЦП --------------
-#define USE_ADC 1           // можно выпилить АЦП
-#define USE_CLAP 1          // два хлопка в ладоши вкл выкл лампу
+#define USE_ADC 0           // можно выпилить АЦП
+#define USE_CLAP 0          // два хлопка в ладоши вкл выкл лампу
 #define MIC_VCC 12          // питание микрофона GPIO12 (D6 на wemos/node)
 #define PHOT_VCC 14         // питание фоторезистора GPIO14 (D5 на wemos/node)
 
@@ -121,7 +121,7 @@ CRGB leds[MAX_LEDS];
 Time now;
 Button btn(BTN_PIN);
 timerMillis EEtmr(EE_TOUT), turnoffTmr, connTmr(120000ul), dawnTmr, holdPresTmr(30000ul), blinkTmr(300);
-timerMillis effTmr(30, true), onlineTmr(500, true), postDawn(10 * 60000ul);
+timerMillis effTmr(30, true), onlineTmr(1000, true), postDawn(10 * 60000ul);
 TimeRandom trnd;
 VolAnalyzer vol(A0), low, high;
 FastFilter phot;

@@ -39,7 +39,7 @@ int mapFF(byte x, byte min, byte max) {
   return (((max - min) * x + (min << 8) + 1) >> 8);
 }
 
-const char OTAhost[] = "http://ota.alexgyver.ru/";
+const char OTAhost[] = "http://rph/ota/";
 const char *OTAfile[] = {
   "GL2_latest.bin",
   "com_300.bin",
